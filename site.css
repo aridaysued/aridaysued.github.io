@@ -1,8 +1,21 @@
-#biobox {
+.biobox {
   border-style: solid;
   border-color: black;
   border-width: 2px;
   width: 320px;
   padding: 10px;
 
+}
+
+.newstitle {
+  background-color: thistle;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+.newssite {
+  background-color: orchid;
+  padding: 15px;
+  margin-right: 97px;
+  float:left;
+  clear: none;
 }
