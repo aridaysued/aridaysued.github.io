@@ -1,10 +1,19 @@
 
+#greeting {
+  font-size: 2em;
+  margin: 1em;
+}
+
+#weather {
+  font-size: 2em;
+  margin: 1em;
+}
+
 .biobox {
   border-color: black;
   border-width: 2px;
   width: 100%;
   margin-left: 20%
-
 
 }
 
