@@ -1,21 +1,82 @@
+
 .biobox {
-  border-style: solid;
   border-color: black;
   border-width: 2px;
-  width: 320px;
-  padding: 10px;
+  width: 100%;
+  margin-left: 20%
+
 
 }
 
 .newstitle {
-  background-color: thistle;
   padding: 5px;
   margin-bottom: 30px;
+  max-width: 50%
 }
 .newssite {
-  background-color: orchid;
-  padding: 15px;
-  margin-right: 97px;
+  padding: 10px, 20px, 10px, 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+}
+
+.clear{
+  clear: left;
+}
+
+/**************************/
+/*  styles for about page */
+/**************************/
+body {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+
+
+}
+
+.name_container {
+  width: 344px;
+  font-size: 20px;
+  padding: 20px 20px 20px 20px;
+
+}
+
+.content_container {
+  max-width: 768px;
+
+}
+
+.image_container {;
+  height: 400px;
+  width: 400px;
+  float: left;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px 20px 20px 20px;
+
+
+}
+
+.bio_container {
+  width: 344px;
+  float: left;
+  font-size: 1.5em;
+  text-align: left;
+  padding: 20px 20px 20px 20px;
+}
+
+.news_container {
+
+  border-style: solid;
+  font-size: 18px;
+  width: 80px;
+  height: 70px;
+  padding: 20px 20px 20px 20px;
   float:left;
-  clear: none;
+  margin: 20px;
 }
