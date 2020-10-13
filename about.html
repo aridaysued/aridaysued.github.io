@@ -15,7 +15,7 @@
 
         function listSheet() {
         // list google sheet rows
-        fetch('https://api.sheetson.com/v2/sheets/test', {
+        fetch('https://api.sheetson.com/v2/sheets/Sheet1?no-cache=true', {
           withCredentials: true,
           headers: {
             'Content-Type': 'application/json',
@@ -27,9 +27,9 @@
         .then(function(data) {
           for (var i = 0; i < data.results.length; i++) {
             var result = data.results[i];
-          
-            let divElement = '<p>' + result.name + '</p>';
-            //let divElement = '<div class="cell">' + '<div class="cell_name">' + result.name + '</div>' + '<div class="cell_address">' + result.address + '</div>' + '<div class="cell_url"><a href="' + result.url + '">' + result.url + '</a></div>' + '<div class="cell_phone">' + result.phone + '</div>' + '</div>';
+
+          //  let divElement = '<p>' + result.name + '</p>';
+           let divElement = '<div class="cell">' + '<div class="cell_name">' + result.name + '</div>' + '<div class="cell_address">' + result.address + '</div>' + '<div class="cell_url"><a href="' + result.url + '">' + result.url + '</a></div>' + '<div class="cell_phone">' + result.phone + '</div>' + '</div>';
 
             document.getElementById("sheet").innerHTML += divElement;
           }
