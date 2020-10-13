@@ -1,4 +1,23 @@
+.cell{
+  margin: 1em;
+}
 
+.cell_name{
+  margin: 1em;
+}
+
+.cell_address{
+  margin: 1em;
+}
+
+
+.cell_url{
+  margin: 1em;
+}
+
+.cell_phone{
+  margin: 1em;
+}
 #greeting {
   font-size: 2em;
   margin: 1em;

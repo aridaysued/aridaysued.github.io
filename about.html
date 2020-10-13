@@ -5,11 +5,40 @@
 
       window.onload = function() {
         // functions that run after page loads
+        listSheet();
         displayGreeting();
         fetchWeather();
         displayRSSFeed();
 
+
       }
+
+        function listSheet() {
+        // list google sheet rows
+        fetch('https://api.sheetson.com/v2/sheets/test', {
+          withCredentials: true,
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer vW-kXqw9hruTssfCgD67qk_spt-ocwdS9RvayoSY67yesCxhSbttPJ93BAYGaw',
+            'X-Sheetson-Spreadsheet-Id': '1izFle9qHHLHzCYQxV2tKCiPS8yQdB7NsVJ5Y1presoE'
+          }
+        })
+        .then(function(resp) { return resp.json() })
+        .then(function(data) {
+          for (var i = 0; i < data.results.length; i++) {
+            var result = data.results[i];
+          
+            let divElement = '<p>' + result.name + '</p>';
+            //let divElement = '<div class="cell">' + '<div class="cell_name">' + result.name + '</div>' + '<div class="cell_address">' + result.address + '</div>' + '<div class="cell_url"><a href="' + result.url + '">' + result.url + '</a></div>' + '<div class="cell_phone">' + result.phone + '</div>' + '</div>';
+
+            document.getElementById("sheet").innerHTML += divElement;
+          }
+        })
+        .catch(function() {
+          document.getElementById("sheet").innerHTML = "Error in listSheet function";
+        });
+      }
+
 
         function displayRSSFeed() {
         // fetch an RSS feed and display the title and description
@@ -64,6 +93,7 @@
     <script src="https://storage.googleapis.com/feednami-static/js/feednami-client-v1.0.1.js"></script>
   </head>
   <body>
+    <div id="sheet"></div>
     <div id="greeting"></div>
     <div id="weather"></div>
     <div id="rss_items"></div>
