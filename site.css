@@ -109,3 +109,9 @@ img {
   float:left;
   margin: 20px;
 }
+
+#mapid {
+  height: 640px;
+  width: 640px;
+  border: 2px solid blue;
+}
